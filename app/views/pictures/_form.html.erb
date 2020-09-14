@@ -1,5 +1,3 @@
-<div class="container p-3">
-
 <%= simple_form_for @pic, html: { multipart: true } do |f| %>
 	<% if @pic.errors.any? %>
 		<h2><%= pluralize(@pic.errors.count, 'error') %> prevented this picture from saving</h2>
@@ -21,4 +19,3 @@
 
 	<%= f.button :submit, class: 'btn btn-outline-primary' %>
 <% end %>
-</div>
