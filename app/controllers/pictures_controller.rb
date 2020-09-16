@@ -2,7 +2,7 @@ class PicturesController < ApplicationController
 	before_action :set_pic, only: %i(show edit update destroy)
 
 	def index
-		@pics = Picture.all
+		@pics = Picture.all.order('created_at DESC')
 	end
 
 	def new
@@ -20,6 +20,22 @@ class PicturesController < ApplicationController
 	end
 
 	def show
+	end
+
+	def edit
+	end
+
+	def update
+		if @pic.update(pic_params)
+			redirect_to @pic, notice: 'Congrats! Pic was updated'
+		else
+			render :edit
+		end
+	end
+
+	def destroy
+		@pic.destroy
+		redirect_to root_path
 	end
 
 	private
