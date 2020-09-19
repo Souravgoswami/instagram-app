@@ -32,3 +32,5 @@ end
 gem "simple_form", "~> 5.0"
 
 gem "devise", "~> 4.7"
+
+gem "paperclip", "~> 6.1"

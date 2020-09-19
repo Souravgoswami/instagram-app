@@ -1,5 +1,4 @@
-
-
-		<% @pics.each do |pic| %>
-			<h2><%= link_to pic.title, pic %></h2>
-		<% end %>
+<% @pics.each do |pic| %>
+	<h2><%= link_to pic.title, pic %></h2>
+	<%= image_tag pic.image.url %>
+<% end %>

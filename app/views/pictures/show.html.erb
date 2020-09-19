@@ -1,8 +1,10 @@
 <div class="">
 	<br>
 </div>
-	<h1><%= @pic.title %></h1>
-	<h5>Picture by <%= @pic.user.username || @pic.user.email %></h5>
+
+<h1><%= @pic.title %></h1>
+<h5>Picture by <%= @pic.user.username || @pic.user.email %></h5>
+<%= image_tag @pic.image.url %>
 
 <p><%= @pic.description %></p>
 <%= link_to 'Home', root_path %>
